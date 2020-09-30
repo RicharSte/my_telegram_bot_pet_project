@@ -1,7 +1,8 @@
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from handlers import (get_planet, greet_user, next_full_moon, word_count,
-                      calc, cities11, user_coordinates, talk_to_me, check_user_photo) 
+                      calc, cities11, user_coordinates, talk_to_me, check_user_photo)
+from settings import BOT_TOKEN, PROXY
 
 logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO,
@@ -19,7 +20,7 @@ PROXY = {
 
 
 def main():
-    mybot = Updater("BOT_TOKEN", use_context = True) #request_kwargs=PROXY)
+    mybot = Updater(BOT_TOKEN, use_context = True) #request_kwargs=PROXY)
     
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler('start', greet_user))
