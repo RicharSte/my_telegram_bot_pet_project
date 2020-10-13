@@ -6,4 +6,4 @@ PROXY = {
     }
 }
 
-BOT_TOKEN = 'Token from Bot father'
+BOT_TOKEN = 'Token From BotFather'

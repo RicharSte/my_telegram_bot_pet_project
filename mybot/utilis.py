@@ -1,11 +1,12 @@
 from clarifai.rest import ClarifaiApp
 from telegram import ReplyKeyboardMarkup, KeyboardButton
 
-CLARIFAI_API_KEY = 'dba2a4aba0cc419fa7fde956e4d3f0f8'
+CLARIFAI_API_KEY = 'Token'
 
 def key_board():
     return ReplyKeyboardMarkup(
-        [[KeyboardButton('Where am i?', request_location = True)]])
+        [[KeyboardButton('Where am i?', request_location = True),
+          'Заполнить анкету']])
     
 def is_cat(file_name):
     app = ClarifaiApp(api_key=CLARIFAI_API_KEY)
